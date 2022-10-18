@@ -23,3 +23,21 @@ The model is trained on the FER-2013 dataset downloaded from Kaggle.This dataset
 * Pre Trained Haar Cascade
 * Streamlit
 * Streamlit-webrtc
+
+# Model Creation
+A Convolutional Neural Network, also known as CNN or ConvNet, is a class of neural network that specializes in processing data that has a grid-like topology, such as an image.A CNN typically has three layers: a convolutional layer, a pooling layer, and a fully connected layer.The layers are arranged in such a way so that they detect simpler patterns first (lines, curves, etc.) and more complex patterns (faces, objects, etc.) further along.The convolution layer is the core building block of the CNN. It carries the main portion of the network’s computational load.This layer performs a dot product between two matrices, where one matrix is the set of learnable parameters otherwise known as a kernel, and the other matrix is the restricted portion of the receptive field.The pooling layer replaces the output of the network at certain locations by deriving a summary statistic of the nearby outputs.Fully Connected Layers neurons in this layer have full connectivity with all neurons in the preceding and succeeding layer as seen in regular FCNN.
+
+![Alt](https://raw.githubusercontent.com/travistangvh/emotion-detection-in-real-time/master/images/VGGFaceNetwork.jpg) 
+
+# Loss and Accuracy Plot
+
+A convolutional neural network can be evaluated using the ‘evaluate’ method. This method takes the test data as its parameters. Before this, the data is plotted on the console using ‘matplotlib’ library and ‘imshow’ methods.The accuracy versus epoch data is visualized.This is done using matplotlib library.The model is evaluated, and the loss and accuracy are determined.
+![Alt](https://github.com/SampannaMishra/FaceEmotionRecognition/blob/main/visualization/finalval.JPG)
+
+# Deployment of Streamlit Webapp on Cloud
+
+Streamlit  which is an open source web framework has been used to build face emotion recognition web app.OpenCV, an open source computer vision and machine learning software library has also been used for real time face reading.The model weights were saved in json and h5 file format which were later used.Created a function FaceEmotion to detect multiple faces in video camera which further provides a bounding box around faces and predicts face emotion.
+Streamlit library does not provide the live capture feature itself ,instead uses a third party API.
+Therefore,I used streamlit-webrtc which helped to deal with real-time video streams. Image captured from the webcam is sent to the VideoTransformer function to detect the emotion.
+Then this model was deployed on heroku and streamlit platform with the help of buildpack-apt which is necessary to deploy opencv model on heroku and streamlit.
+
