@@ -41,7 +41,7 @@ Streamlit library does not provide the live capture feature itself ,instead uses
 Therefore,I used streamlit-webrtc which helped to deal with real-time video streams. Image captured from the webcam is sent to the VideoTransformer function to detect the emotion.
 Then this model was deployed on heroku platform. 
 
-App link Deployed on Heroku is  (https://xcv-app.herokuapp.com/)
+App link Deployed on Heroku is : https://xcv-app.herokuapp.com/
 
 # Conclusion
 * **The total epochs considered initially for the training the images was 45.Too many epochs can lead to overfitting of the training dataset, whereas too few may result in an underfit model. However by usage of early stopping which allowed  to specify an arbitrary number of training epochs and stop training once the model performance stops improving on a hold out validation dataset**.
