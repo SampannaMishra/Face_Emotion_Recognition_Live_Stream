@@ -39,7 +39,10 @@ A convolutional neural network can be evaluated using the ‘evaluate’ method.
 Streamlit  which is an open source web framework has been used to build face emotion recognition web app.OpenCV, an open source computer vision and machine learning software library has also been used for real time face reading.The model weights were saved in json and h5 file format which were later used.Created a function FaceEmotion to detect multiple faces in video camera which further provides a bounding box around faces and predicts face emotion.
 Streamlit library does not provide the live capture feature itself ,instead uses a third party API.
 Therefore,I used streamlit-webrtc which helped to deal with real-time video streams. Image captured from the webcam is sent to the VideoTransformer function to detect the emotion.
-Then this model was deployed on heroku and streamlit platform with the help of buildpack-apt which is necessary to deploy opencv model on heroku and streamlit.
+Then this model was deployed on heroku platform. 
+
+App link Deployed on Heroku is
+![Alt](https://xcv-app.herokuapp.com/)
 
 # Conclusion
 * **The total epochs considered initially for the training the images was 45.Too many epochs can lead to overfitting of the training dataset, whereas too few may result in an underfit model. However by usage of early stopping which allowed  to specify an arbitrary number of training epochs and stop training once the model performance stops improving on a hold out validation dataset**.
